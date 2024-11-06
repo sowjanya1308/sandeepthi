@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: #fff;
+    padding: 1em 2em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FFD700;
+    cursor: pointer;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+.navbar-menu li {
+    position: relative;
+}
+
+.navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5em 0.8em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+    background-color: #FFD700;
+    color: #222;
+}
+
+/* Navbar Toggle Button (for smaller screens) */
+.navbar-toggle {
+    display: none;
+    font-size: 1.5em;
+    color: #FFD700;
+    cursor: pointer;
+}
+
+/* Mobile View - Navbar menu */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1em 0;
+        z-index: 999;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-menu li {
+        text-align: center;
+        margin: 0.5em 0;
+    }
+}
+
+
+/* Center Content and Style the Upload Section */
+.page-content {
+    max-width: 600px;
+    margin: 2em auto; /* Center content horizontally */
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.page-content h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.page-content p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 1em;
+}
+
+.page-content input[type="file"] {
+    margin: 1em 0;
+    padding: 0.5em;
+}
+
+.page-content button {
+    padding: 0.6em 1.5em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.page-content button:hover {
+    background-color: #555;
+}
+
+#uploadStatus {
+    margin-top: 1em;
+    font-size: 0.9em;
+    color: #28a745;
+}
